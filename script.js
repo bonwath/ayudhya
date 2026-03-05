@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Mobile hamburger (works on ALL pages)
+  const mobileMenu = document.getElementById("mobileMenu");
+  const navMenu = document.querySelector(".nav");
+
+  if (mobileMenu && navMenu) {
+    mobileMenu.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
+
+  // ✅ If we are NOT on projects page, stop here
+  const projectGrid = document.getElementById("projectGrid");
+  if (!projectGrid) return;
 // Small progressive enhancement: animate the "Projects delivered" number.
 (function () {
   const el = document.querySelector('[data-count]');
@@ -308,20 +321,6 @@ document.addEventListener("keydown", (e)=>{
   if(e.key === "ArrowLeft"){
     viewerPrev.click();
   }
-
 });
-
-/* ===============================
-   MOBILE HAMBURGER MENU
-================================ */
-
-const mobileMenu = document.getElementById("mobileMenu");
-const navMenu = document.querySelector(".nav");
-
-if (mobileMenu && navMenu) {
-  mobileMenu.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-}
 
 });
