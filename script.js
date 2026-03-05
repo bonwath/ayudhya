@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 // Small progressive enhancement: animate the "Projects delivered" number.
 (function () {
   const el = document.querySelector('[data-count]');
@@ -314,17 +315,13 @@ document.addEventListener("keydown", (e)=>{
    MOBILE HAMBURGER MENU
 ================================ */
 
-document.addEventListener("DOMContentLoaded", () => {
+const mobileMenu = document.getElementById("mobileMenu");
+const navMenu = document.querySelector(".nav");
 
-  const mobileMenu = document.getElementById("mobileMenu");
-  const navMenu = document.querySelector(".nav");
-
-  if(mobileMenu && navMenu){
-
-    mobileMenu.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-
-  }
+if (mobileMenu && navMenu) {
+  mobileMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
 
 });
