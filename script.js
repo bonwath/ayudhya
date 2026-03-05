@@ -224,9 +224,8 @@ if (yearFilter) {
 if (searchInput || ministryFilter || yearFilter){
   filterProjects();
 }
- filterProjects();
 
- const viewer = document.getElementById("imageViewer");
+const viewer = document.getElementById("imageViewer");
 const viewerImg = document.getElementById("viewerImg");
 const viewerCounter = document.getElementById("viewerCounter");
 
