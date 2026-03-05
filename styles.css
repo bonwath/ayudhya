@@ -1345,6 +1345,10 @@ main{flex:1;}
   to{opacity:1; transform:scale(1);}
 }
 
+.mobile-menu{
+  display:none;
+}
+
 /* =================================
    MOBILE OPTIMIZATION
    Does NOT affect desktop

@@ -70,15 +70,19 @@ document.querySelectorAll('.recordMedia').forEach(media => {
     }
   }
 
+if(rightBtn){
   rightBtn.addEventListener("click", ()=>{
     current = (current + 1) % slides.length;
     updateSlider();
   });
+}
 
+if(leftBtn){
   leftBtn.addEventListener("click", ()=>{
     current = (current - 1 + slides.length) % slides.length;
     updateSlider();
   });
+}
 
   updateSlider(); // IMPORTANT: initialize slider
 });
@@ -262,19 +266,25 @@ document.querySelectorAll(".viewImage").forEach(btn => {
 
 });
 
-viewerNext.onclick = () => {
-  index = (index + 1) % images.length;
-  updateViewer();
-};
+if(viewerNext){
+  viewerNext.onclick = () => {
+    index = (index + 1) % images.length;
+    updateViewer();
+  };
+}
 
-viewerPrev.onclick = () => {
-  index = (index - 1 + images.length) % images.length;
-  updateViewer();
-};
+if(viewerPrev){
+  viewerPrev.onclick = () => {
+    index = (index - 1 + images.length) % images.length;
+    updateViewer();
+  };
+}
 
-viewerClose.onclick = () => {
-  viewer.style.display = "none";
-};
+if(viewerClose){
+  viewerClose.onclick = () => {
+    viewer.style.display = "none";
+  };
+}
 
 viewer.onclick = (e)=>{
   if(e.target === viewer){
@@ -304,15 +314,17 @@ document.addEventListener("keydown", (e)=>{
    MOBILE HAMBURGER MENU
 ================================ */
 
-const mobileMenu = document.getElementById("mobileMenu");
-const navMenu = document.querySelector(".nav");
+document.addEventListener("DOMContentLoaded", () => {
 
-if(mobileMenu && navMenu){
+  const mobileMenu = document.getElementById("mobileMenu");
+  const navMenu = document.querySelector(".nav");
 
-  mobileMenu.addEventListener("click", () => {
+  if(mobileMenu && navMenu){
 
-    navMenu.classList.toggle("active");
+    mobileMenu.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
 
-  });
+  }
 
-}
+});
