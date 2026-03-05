@@ -1484,8 +1484,6 @@ main{flex:1;}
   display:none;
 }
 
-@media (max-width:768px){
-
 .mobile-menu{
   width:42px;
   height:42px;
@@ -1540,5 +1538,4 @@ main{flex:1;}
   box-shadow:0 18px 40px rgba(0,0,0,.12);
 }
 
-}
 }
