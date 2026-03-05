@@ -1479,19 +1479,12 @@ main{flex:1;}
    MOBILE HAMBURGER
 ================================ */
 
-/* hidden on desktop */
-
+/* hide hamburger on desktop */
 .mobile-menu{
   display:none;
 }
 
-/* mobile */
-
 @media (max-width:768px){
-
-.nav{
-  display:none;
-}
 
 .mobile-menu{
   width:42px;
@@ -1524,15 +1517,12 @@ main{flex:1;}
   background:white;
 }
 
-.mobile-menu span::before{
-  top:-6px;
-}
+.mobile-menu span::before{ top:-6px; }
+.mobile-menu span::after{ top:6px; }
 
-.mobile-menu span::after{
-  top:6px;
+.nav{
+  display:none;
 }
-
-/* when menu open */
 
 .nav.active{
   display:flex;
@@ -1547,7 +1537,7 @@ main{flex:1;}
   padding:16px;
 
   border-radius:14px;
-  box-shadow:var(--shadow);
+  box-shadow:0 18px 40px rgba(0,0,0,.12);
 }
 
 }
