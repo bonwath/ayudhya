@@ -290,3 +290,20 @@ document.addEventListener("keydown", (e)=>{
   }
 
 });
+
+/* ===============================
+   MOBILE HAMBURGER MENU
+================================ */
+
+const mobileMenu = document.getElementById("mobileMenu");
+const navMenu = document.querySelector(".nav");
+
+if(mobileMenu && navMenu){
+
+  mobileMenu.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+  });
+
+}

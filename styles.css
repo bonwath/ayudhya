@@ -1344,3 +1344,211 @@ main{flex:1;}
   from{opacity:0; transform:scale(.96);}
   to{opacity:1; transform:scale(1);}
 }
+
+/* =================================
+   MOBILE OPTIMIZATION
+   Does NOT affect desktop
+================================= */
+
+@media (max-width:768px){
+
+/* Container spacing */
+.container{
+  padding-left:18px;
+  padding-right:18px;
+}
+
+/* Header */
+
+.header__inner{
+  padding:10px 16px;
+}
+
+.brand__logo{
+  height:44px;
+}
+
+/* Hide desktop nav if needed later */
+/*
+.nav{
+  display:none;
+}
+*/
+
+/* HERO */
+
+.title{
+  font-size:36px;
+  line-height:1.2;
+}
+
+.section__title{
+  font-size:30px;
+}
+
+/* HERO GRAPHIC */
+
+.hero-graphic{
+  max-width:320px;
+  margin-left:0;
+  margin-bottom:-20px;
+}
+
+/* STATS */
+
+.stats{
+  grid-template-columns:1fr;
+}
+
+/* SERVICE GRID */
+
+.serviceGrid{
+  grid-template-columns:1fr;
+}
+
+/* CAPABILITIES */
+
+.capGrid{
+  grid-template-columns:1fr;
+}
+
+/* RECORD ITEMS */
+
+.recordItem{
+  flex-direction:column;
+  gap:16px;
+}
+
+.recordMedia{
+  width:100%;
+  height:200px;
+}
+
+/* PROJECT CARD */
+
+.projectCard{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+}
+
+.projectImage{
+  width:100%;
+}
+
+.projectImage img{
+  width:100%;
+  height:200px;
+}
+
+/* PROJECT HERO CONTROLS */
+
+.projects-hero__controls{
+  flex-direction:column;
+  align-items:stretch;
+}
+
+.projects-hero__controls input{
+  width:100%;
+}
+
+.searchBox{
+  width:100%;
+}
+
+/* BOARD */
+
+.board-inner{
+  padding:30px;
+}
+
+/* CONTACT */
+
+.contact{
+  grid-template-columns:1fr;
+}
+
+/* FOOTER */
+
+.footer__inner{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+/* ===============================
+   MOBILE HAMBURGER
+================================ */
+
+/* hidden on desktop */
+
+.mobile-menu{
+  display:none;
+}
+
+/* mobile */
+
+@media (max-width:768px){
+
+.nav{
+  display:none;
+}
+
+.mobile-menu{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--brand);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+}
+
+.mobile-menu span{
+  display:block;
+  width:18px;
+  height:2px;
+  background:white;
+  position:relative;
+}
+
+.mobile-menu span::before,
+.mobile-menu span::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:18px;
+  height:2px;
+  background:white;
+}
+
+.mobile-menu span::before{
+  top:-6px;
+}
+
+.mobile-menu span::after{
+  top:6px;
+}
+
+/* when menu open */
+
+.nav.active{
+  display:flex;
+  position:absolute;
+  top:70px;
+  right:20px;
+
+  flex-direction:column;
+  gap:10px;
+
+  background:white;
+  padding:16px;
+
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+}
+}
