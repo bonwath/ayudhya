@@ -1358,8 +1358,8 @@ main{flex:1;}
 
 /* Container spacing */
 .container{
-  padding-left:18px;
-  padding-right:18px;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 /* Header */
@@ -1536,5 +1536,24 @@ main{flex:1;}
 
   border-radius:14px;
   box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+/* MOBILE CONTACT FIX */
+
+.contact{
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.contact__media{
+  width:100%;
+  height:180px;
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+
+.contact__media iframe{
+  width:100%;
+  height:100%;
+  border:0;
 }
 }

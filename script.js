@@ -1,13 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Mobile hamburger (works on ALL pages)
   const mobileMenu = document.getElementById("mobileMenu");
-  const navMenu = document.querySelector(".nav");
+const navMenu = document.querySelector(".nav");
 
-  if (mobileMenu && navMenu) {
-    mobileMenu.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
+if (mobileMenu && navMenu) {
+
+  // open / close hamburger
+  mobileMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  // close menu when clicking a link
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
     });
-  }
+  });
+
+}
+document.querySelectorAll(".toggleBtn").forEach(btn => {
+
+    btn.addEventListener("click", function(){
+
+      const content = this.closest(".card").querySelector(".toggleContent");
+
+      content.classList.toggle("active");
+
+      this.textContent =
+        content.classList.contains("active")
+        ? "View less"
+        : "View more";
+
+    });
+
+  });
 
   // ✅ If we are NOT on projects page, stop here
   const projectGrid = document.getElementById("projectGrid");
@@ -48,22 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   io.observe(el);
 })();
-document.querySelectorAll(".toggleBtn").forEach(btn => {
-
-  btn.addEventListener("click", function () {
-
-    const content = this.closest(".card").querySelector(".toggleContent");
-
-    content.classList.toggle("active");
-
-    this.textContent =
-      content.classList.contains("active")
-        ? "View less"
-        : "View more";
-
-  });
-
-});
 
 document.querySelectorAll('.recordMedia').forEach(media => {
 
