@@ -191,29 +191,39 @@ function renderPagination(totalPages){
   next.onclick = () => showPage(currentPage + 1);
   pagination.appendChild(next);
 }
-searchInput.addEventListener("keyup", filterProjects);
+if (searchInput) {
+  searchInput.addEventListener("keyup", filterProjects);
+}
 
-ministryFilter.addEventListener("change", function(){
+if (ministryFilter) {
+  ministryFilter.addEventListener("change", function(){
 
-  if(this.value === "clear"){
-    this.selectedIndex = 0;
+    if(this.value === "clear"){
+      this.selectedIndex = 0;
+      filterProjects();
+      return;
+    }
+
     filterProjects();
-    return;
-  }
+  });
+}
 
-  filterProjects();
-});
+if (yearFilter) {
+  yearFilter.addEventListener("change", function(){
 
-yearFilter.addEventListener("change", function(){
+    if(this.value === "clear"){
+      this.selectedIndex = 0;
+      filterProjects();
+      return;
+    }
 
-  if(this.value === "clear"){
-    this.selectedIndex = 0;
     filterProjects();
-    return;
-  }
+  });
+}
 
+if (searchInput || ministryFilter || yearFilter){
   filterProjects();
-});
+}
  filterProjects();
 
  const viewer = document.getElementById("imageViewer");
