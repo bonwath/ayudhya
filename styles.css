@@ -1212,15 +1212,6 @@ main{flex:1;}
   flex-shrink: 0;
 }
 
-/* Images */
-.recordMedia .slide{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-}
-
 .recordMedia .slide.active{
   display: block;
 }
@@ -1354,56 +1345,110 @@ main{flex:1;}
   to{opacity:1; transform:scale(1);}
 }
 
-/* =================================
-   MOBILE OPTIMIZATION
-   (does NOT affect desktop)
-   ================================= */
+/* MOBILE ONLY — does NOT affect desktop */
+@media (max-width: 768px){
 
-@media (max-width:768px){
-
-  /* container padding so text doesn't touch edges */
   .container{
     padding-left:20px;
     padding-right:20px;
   }
 
-  /* stack header items if needed */
   .header__inner{
-    flex-wrap:wrap;
-    gap:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
   }
 
-  /* navigation alignment */
+  .brand__logo{
+    height:45px;
+  }
+
+  /* hide desktop nav */
   .nav{
+    display:none;
+  }
+
+  /* hamburger */
+  .mobile-menu{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:#c81d1d;
+    display:flex;
+    align-items:center;
     justify-content:center;
-    flex-wrap:wrap;
   }
 
-  /* hero text resize */
-  .hero h1{
-    font-size:28px;
-    line-height:1.3;
+  .mobile-menu span{
+    display:block;
+    width:18px;
+    height:2px;
+    background:white;
+    position:relative;
   }
 
-  .hero p{
+  .mobile-menu span::before,
+  .mobile-menu span::after{
+    content:"";
+    position:absolute;
+    left:0;
+    width:18px;
+    height:2px;
+    background:white;
+  }
+
+  .mobile-menu span::before{
+    top:-6px;
+  }
+
+  .mobile-menu span::after{
+    top:6px;
+  }
+
+  .title{
+    font-size:32px;
+    line-height:1.2;
+  }
+
+  .lead{
     font-size:16px;
+    line-height:1.6;
   }
 
-  /* buttons stack vertically */
-  .cta{
-    flex-direction:column;
-    gap:12px;
+  .section--hero{
+    padding-top:40px;
   }
 
-  /* project cards go to single column */
-  .projects-grid{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
+}
+/* MOBILE MENU PANEL */
+.mobile-nav{
+  position:absolute;
+  top:70px;
+  left:0;
+  right:0;
 
-  /* improve card spacing */
-  .card{
-    padding:18px;
-  }
+  background:white;
+  border-bottom:1px solid rgba(0,0,0,.08);
 
+  display:none;
+  flex-direction:column;
+  padding:20px;
+
+  box-shadow:0 14px 40px rgba(0,0,0,.12);
+}
+
+.mobile-nav a{
+  padding:12px 0;
+  text-decoration:none;
+  color:#111;
+  font-weight:700;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.mobile-nav a:last-child{
+  border-bottom:none;
+}
+
+.mobile-nav.active{
+  display:flex;
 }
