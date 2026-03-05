@@ -347,14 +347,18 @@ main{flex:1;}
   height:100%;
   object-fit:cover;
 }
-.contact__media {
-  min-height: 100%;
+
+.contact__media{
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
-.contact__media iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 22px;
+.contact__media iframe{
+  width:100%;
+  height:100%;
+  min-height:260px;
+  border:0;
+  display:block;
 }
 
 .recordGrid{
@@ -1540,13 +1544,18 @@ main{flex:1;}
 /* MOBILE CONTACT FIX */
 
 .contact{
+  display:grid;
   grid-template-columns:1fr;
   gap:18px;
 }
 
+.contact__card{
+  width:100%;
+}
+
 .contact__media{
   width:100%;
-  height:180px;
+  height:220px;
   border-radius:var(--radius);
   overflow:hidden;
 }
@@ -1555,5 +1564,7 @@ main{flex:1;}
   width:100%;
   height:100%;
   border:0;
+  display:block;
 }
+
 }
