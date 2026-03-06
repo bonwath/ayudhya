@@ -1510,6 +1510,18 @@ main{flex:1;}
   font-size:12px;
 }
 
+/* REMOVE RED LINE ON MOBILE */
+
+.projectCard::before{
+  display:none;
+}
+
+/* EXPAND CARD WIDTH */
+
+.projectCard{
+  padding:14px;
+}
+
 /* PROJECT HERO CONTROLS */
 
 .projects-hero__controls{
@@ -1528,7 +1540,24 @@ main{flex:1;}
 /* BOARD */
 
 .board-inner{
-  padding:30px;
+  padding:16px;
+}
+
+/* MOBILE PROJECT CARD TYPOGRAPHY */
+
+.projectInfo h3{
+  font-size:12px;
+  line-height:1.35;
+  margin-bottom:8px;
+}
+
+.projectInfo p{
+  font-size:9px;
+  line-height:1.35;
+}
+
+.projectDetail{
+  font-size:9px;
 }
 
 /* CONTACT */
