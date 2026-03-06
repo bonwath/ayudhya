@@ -32,9 +32,32 @@ document.querySelectorAll(".toggleBtn").forEach(btn => {
         : "View more";
 
     });
+  });
+
+  /* ===== MOBILE BACK TO TOP ===== */
+
+const backTop = document.getElementById("backTop");
+
+if(backTop){
+
+  window.addEventListener("scroll", () => {
+
+    if(window.innerWidth <= 768 && window.scrollY > 400){
+      backTop.style.display = "flex";
+    } else {
+      backTop.style.display = "none";
+    }
 
   });
 
+  backTop.addEventListener("click", () => {
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  });
+
+}
   // ✅ If we are NOT on projects page, stop here
   const projectGrid = document.getElementById("projectGrid");
   if (!projectGrid) return;
