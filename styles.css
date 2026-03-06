@@ -1797,117 +1797,37 @@ main{flex:1;}
   border:0;
   display:block;
 }
-
 }
 
-/* =================================
-   GLOBAL MOBILE SIZE OVERRIDE
-================================= */
+/* =========================
+   PHONE LAYOUT
+========================= */
 
-@media (max-width:768px){
+@media (max-width:480px){
 
-/* GLOBAL FONT SIZE */
 body{
   font-size:14px;
 }
 
-/* HEADINGS */
-.title{
-  font-size:30px !important;
-}
-
-.section__title{
-  font-size:26px !important;
-}
-
-.contact__card h3{
-  font-size:20px !important;
-}
-
-/* PARAGRAPHS */
-.lead,
-.card p,
-.service p{
-  font-size:14px;
-}
-
-/* CONTACT ROW FIX */
-.contact__row{
-  grid-template-columns:80px 1fr !important;
-  gap:6px !important;
-  padding:6px 0 !important;
-}
-
-/* LABEL BADGE */
-.badge{
-  font-size:10px !important;
-  padding:4px 8px !important;
-}
-
-/* CONTACT TEXT */
-.contact__value{
-  font-size:13px !important;
-  line-height:1.4 !important;
-  word-break:break-word;
-}
-
-/* CONTACT CARD */
-.contact__card{
-  padding:14px !important;
-}
-
-/* MAP HEIGHT */
-.contact__media{
-  height:150px !important;
-}
-
-.contact__media iframe{
-  min-height:150px !important;
-}
-
-}
-}
-/* ================================
-   HARD MOBILE RESET (CONTACT)
-   This replaces the old layout
-================================ */
-
-@media (max-width:768px){
-
-.contact{
-  display:block;
-}
-
-.contact__card{
-  padding:14px;
-}
-
-/* Replace grid layout */
+/* Contact rows stack */
 .contact__row{
   display:flex;
   flex-direction:column;
   gap:4px;
-  padding:8px 0;
 }
 
-/* Label */
+/* Labels */
 .badge{
   font-size:11px;
   padding:4px 8px;
-  width:fit-content;
 }
 
-/* Values */
+/* Text */
 .contact__value{
   font-size:13px;
-  line-height:1.4;
 }
 
 /* Buttons */
-.contact__actions{
-  gap:8px;
-}
-
 .btn{
   font-size:13px;
   padding:8px 12px;
@@ -1918,8 +1838,6 @@ body{
   height:150px;
 }
 
-.contact__media iframe{
-  height:100%;
 }
 
 }
