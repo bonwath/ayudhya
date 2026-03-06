@@ -1799,4 +1799,71 @@ main{flex:1;}
 }
 
 }
+
+/* =================================
+   GLOBAL MOBILE SIZE OVERRIDE
+================================= */
+
+@media (max-width:768px){
+
+/* GLOBAL FONT SIZE */
+body{
+  font-size:14px;
+}
+
+/* HEADINGS */
+.title{
+  font-size:30px !important;
+}
+
+.section__title{
+  font-size:26px !important;
+}
+
+.contact__card h3{
+  font-size:20px !important;
+}
+
+/* PARAGRAPHS */
+.lead,
+.card p,
+.service p{
+  font-size:14px;
+}
+
+/* CONTACT ROW FIX */
+.contact__row{
+  grid-template-columns:80px 1fr !important;
+  gap:6px !important;
+  padding:6px 0 !important;
+}
+
+/* LABEL BADGE */
+.badge{
+  font-size:10px !important;
+  padding:4px 8px !important;
+}
+
+/* CONTACT TEXT */
+.contact__value{
+  font-size:13px !important;
+  line-height:1.4 !important;
+  word-break:break-word;
+}
+
+/* CONTACT CARD */
+.contact__card{
+  padding:14px !important;
+}
+
+/* MAP HEIGHT */
+.contact__media{
+  height:150px !important;
+}
+
+.contact__media iframe{
+  min-height:150px !important;
+}
+
+}
 }
