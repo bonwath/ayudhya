@@ -1543,6 +1543,46 @@ main{flex:1;}
   padding:18px;
 }
 
+/* MOBILE — remove extra board height */
+
+.board{
+  min-height:auto;
+}
+
+.board-inner{
+  min-height:auto;
+}
+
+/* MOBILE — smaller pagination */
+
+.pagination{
+  gap:8px;
+}
+
+.page-btn,
+.page-nav{
+  width:30px;
+  height:30px;
+  font-size:13px;
+  border-radius:8px;
+}
+
+.page-nav{
+  width:28px;
+}
+
+/* MOBILE — remove large empty space under pagination */
+
+.projects-board{
+  padding:20px 0 20px;
+}
+
+.board-inner{
+  min-height:auto;
+  height:auto;
+  padding:18px 18px 10px;
+}
+
 /* MOBILE PROJECT CARD TYPOGRAPHY */
 
 .projectInfo h3{
