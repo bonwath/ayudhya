@@ -199,10 +199,19 @@ function showPage(page) {
   const end = start + cardsPerPage;
 
   matchedCards.forEach((card, index) => {
-    if (index >= start && index < end) {
-      card.style.display = "flex";
-    }
-  });
+  if (index >= start && index < end) {
+
+    card.style.display = "flex";
+
+    /* restart animation */
+    card.classList.remove("page-animate");
+    void card.offsetWidth;
+
+    card.classList.add("page-animate");
+    card.style.animationDelay = `${(index - start) * 0.09}s`;
+
+  }
+});
 
   renderPagination(totalPages);
 }

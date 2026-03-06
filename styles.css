@@ -1046,6 +1046,26 @@ main{flex:1;}
   box-shadow:0 22px 55px rgba(0,0,0,.16);
 }
 
+.projectCard{
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.projectCard.page-animate{
+  animation: pageCardFade .45s ease forwards;
+}
+
+@keyframes pageCardFade{
+  from{
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* IMAGE */
 
 .projectImage{
@@ -1449,21 +1469,45 @@ main{flex:1;}
   height:200px;
 }
 
-/* PROJECT CARD */
+/* MOBILE PROJECT CARD LAYOUT */
 
 .projectCard{
-  flex-direction:column;
+  flex-direction:row;
   align-items:flex-start;
   gap:16px;
+  padding:16px;
 }
 
-.projectImage{
-  width:100%;
+.recordMedia{
+  flex:0 0 150px;
+  width:150px;
+  height:140px;
+  min-height:150px;
+  border-radius:18px;
+  overflow:hidden;
 }
 
-.projectImage img{
+.recordMedia .slide{
   width:100%;
-  height:200px;
+  height:100%;
+  object-fit:cover;
+}
+
+.projectInfo{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.projectInfo h3{
+  margin:0 0 10px;
+  font-size:14px;
+  line-height:1.35;
+}
+
+.projectInfo p{
+  margin:2px 0;
+  font-size:12px;
 }
 
 /* PROJECT HERO CONTROLS */
@@ -1746,6 +1790,10 @@ main{flex:1;}
 }
 .projects-hero{
   padding-top:20px;
+}
+
+.company-name{
+  display:block;
 }
 
 /* =================================
