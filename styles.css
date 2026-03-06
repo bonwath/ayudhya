@@ -104,6 +104,20 @@ img{max-width:100%; height:auto; display:block}
 }
 
 .section{padding:58px 0}
+
+#goods .kicker{
+  display:block;
+}
+
+#goods .section__title{
+  margin-bottom:18px;
+}
+
+#goods .muted{
+  margin:0 0 22px;
+  
+}
+
 .section--hero{
   padding:60px 0 0 0;
   position: relative;
