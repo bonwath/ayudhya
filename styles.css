@@ -1867,3 +1867,59 @@ body{
 
 }
 }
+/* ================================
+   HARD MOBILE RESET (CONTACT)
+   This replaces the old layout
+================================ */
+
+@media (max-width:768px){
+
+.contact{
+  display:block;
+}
+
+.contact__card{
+  padding:14px;
+}
+
+/* Replace grid layout */
+.contact__row{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  padding:8px 0;
+}
+
+/* Label */
+.badge{
+  font-size:11px;
+  padding:4px 8px;
+  width:fit-content;
+}
+
+/* Values */
+.contact__value{
+  font-size:13px;
+  line-height:1.4;
+}
+
+/* Buttons */
+.contact__actions{
+  gap:8px;
+}
+
+.btn{
+  font-size:13px;
+  padding:8px 12px;
+}
+
+/* Map */
+.contact__media{
+  height:150px;
+}
+
+.contact__media iframe{
+  height:100%;
+}
+
+}
