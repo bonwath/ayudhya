@@ -1734,4 +1734,69 @@ main{flex:1;}
 .projects-hero{
   padding-top:20px;
 }
+
+/* =================================
+   CONTACT MOBILE OVERRIDE
+   Forces consistent layout on phones
+================================= */
+
+@media (max-width:768px){
+
+/* Contact layout */
+.contact{
+  grid-template-columns:1fr !important;
+  gap:14px !important;
+}
+
+/* Contact card */
+.contact__card{
+  width:100% !important;
+  padding:16px !important;
+  border-radius:18px;
+}
+
+/* Contact rows */
+.contact__row{
+  display:grid !important;
+  grid-template-columns:90px 1fr !important;
+  gap:8px !important;
+  padding:8px 0 !important;
+}
+
+/* Label badge */
+.badge{
+  font-size:11px !important;
+  padding:5px 10px !important;
+}
+
+/* Text values */
+.contact__value{
+  font-size:14px !important;
+  line-height:1.45 !important;
+  word-break:break-word;
+}
+
+/* Buttons */
+.contact__actions{
+  gap:8px;
+}
+
+/* Map container */
+.contact__media{
+  width:100%;
+  height:200px !important;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+/* Map iframe */
+.contact__media iframe{
+  width:100%;
+  height:100%;
+  min-height:200px !important;
+  border:0;
+  display:block;
+}
+
+}
 }
