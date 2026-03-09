@@ -2027,4 +2027,8 @@ body{
 
 }
 
+.stat__num{
+  color: var(--brand);
+}
+
 

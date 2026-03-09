@@ -58,45 +58,49 @@ if(backTop){
   });
 
 }
-  // ✅ If we are NOT on projects page, stop here
-  const projectGrid = document.getElementById("projectGrid");
-  if (!projectGrid) return;
-// Small progressive enhancement: animate the "Projects delivered" number.
-(function () {
-  const el = document.querySelector('[data-count]');
-  if (!el) return;
 
+// Stats counter animation
+document.querySelectorAll('[data-count]').forEach(el => {
   const target = Number(el.getAttribute('data-count'));
   if (!Number.isFinite(target)) return;
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasPlus = el.textContent.includes('+');
+
   if (prefersReduced) {
-    el.textContent = `${target}+`;
+    el.textContent = hasPlus ? `${target}+` : `${target}`;
     return;
   }
 
   let started = false;
+
   const io = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (e.isIntersecting && !started) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
         started = true;
+
         let n = 0;
         const steps = 40;
-        const inc = Math.max(1, Math.floor(target / steps));
+        const inc = Math.max(1, Math.ceil(target / steps));
+
         const t = setInterval(() => {
           n += inc;
+
           if (n >= target) {
             n = target;
             clearInterval(t);
           }
-          el.textContent = `${n}+`;
+
+          el.textContent = hasPlus ? `${n}+` : `${n}`;
         }, 20);
       }
-    }
+    });
   }, { threshold: 0.4 });
 
   io.observe(el);
-})();
+});
+
+
 
 document.querySelectorAll('.recordMedia').forEach(media => {
 
