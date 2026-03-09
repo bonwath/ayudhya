@@ -2013,6 +2013,12 @@ body{
   align-items:center;
 }
 
+@media (max-width:768px){
+  *{
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 }
 
 }
