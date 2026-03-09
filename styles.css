@@ -1968,6 +1968,55 @@ body{
   height:150px;
 }
 
+/* ===============================
+   MOBILE SEARCH BAR FIX
+=============================== */
+
+@media (max-width:768px){
+
+.projects-hero__controls{
+  flex-direction:row !important;
+  align-items:center;
+  gap:8px;
+}
+
+/* shorter search */
+.searchBox{
+  width:50% !important;
+}
+
+/* smaller filters */
+.filterSelect{
+  width:25%;
+  padding:8px 10px;
+  font-size:11px;
+  border-radius:18px;
+}
+
+.searchBox input{
+  padding:12px 44px 12px 14px;
+  font-size:13px;
+}
+
+.searchBox button{
+  width:34px;
+  height:34px;
+}
+
+@media (max-width:768px){
+
+/* same height as search */
+.filterSelect{
+  height:34px;
+  padding:0 30px 0 14px;
+  display:flex;
+  align-items:center;
+}
+
+}
+
+}
+
 }
 
 }
