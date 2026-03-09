@@ -458,8 +458,9 @@ main{flex:1;}
 
 .supplySlider {
   overflow: hidden;
-  margin-top: 50px;
+  margin-top: 25px; margin-bottom: 25px;
   position: relative;
+  padding-top: 12px; padding-bottom: 14px;
 }
 
 .sliderTrack {
@@ -475,7 +476,7 @@ main{flex:1;}
   padding: 20px;
   background: rgba(255,255,255,.75);
   border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
   transition: transform .3s ease;
 }
 
@@ -510,7 +511,7 @@ main{flex:1;}
 /* ===== Professional View More Placement ===== */
 
 .sliderAction{
-  margin-top: 45px;
+  margin-top: 0px;
   text-align: center;
 }
 
