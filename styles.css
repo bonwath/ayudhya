@@ -2031,4 +2031,10 @@ body{
   color: var(--brand);
 }
 
+#mission,
+#goods,
+#contact,
+#about{
+  scroll-margin-top: 75px;
+}
 
