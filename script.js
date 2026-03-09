@@ -301,13 +301,11 @@ function updateViewer(){
   viewerCounter.textContent = `${index+1} / ${images.length}`;
 }
 
-document.querySelectorAll(".viewImage").forEach(btn => {
+document.querySelectorAll(".recordMedia").forEach(media => {
 
-  btn.addEventListener("click", function(e){
+  media.addEventListener("click", function(){
 
-    e.preventDefault();
-
-    const card = btn.closest(".projectCard");
+    const card = media.closest(".projectCard");
     const slides = card.querySelectorAll(".slide");
 
     images = Array.from(slides).map(img => img.src);
