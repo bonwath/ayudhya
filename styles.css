@@ -1018,7 +1018,7 @@ main{flex:1;}
 
 .projectCard{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   gap:30px;
 
   padding:26px;
@@ -1094,7 +1094,7 @@ main{flex:1;}
 .projectInfo{
   flex:1;
   display:flex;
-  flex-direction:column;
+  flex-direction:column; margin-top:10px;
 }
 
 .projectInfo h3{
@@ -1107,7 +1107,7 @@ main{flex:1;}
 
 .projectInfo p{
   margin:2px 0;
-  font-size:14px;
+  font-size:14px; 
 }
 
 /* LINK */
