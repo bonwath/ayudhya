@@ -510,6 +510,10 @@ main{flex:1;}
   to { transform: translateX(-50%); }
 }
 
+.click-link{
+  color: var(--brand);
+}
+
 /* ===== Professional View More Placement ===== */
 
 .sliderAction{
