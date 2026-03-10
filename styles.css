@@ -952,12 +952,21 @@ main{flex:1;}
   padding: 40px 0 100px;
 }
 
-.board-inner {
-  background: #f3f1ef;
-  border-radius: 50px;
-  padding: 70px;
-  box-shadow: 0 25px 60px rgba(0,0,0,.08);
-  min-height:1060px;
+.board-inner{
+  background:#f3f1ef;
+  border-radius:50px;
+  padding:70px;
+  box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+/* Desktop fixed board */
+@media (min-width:769px){
+
+  .board-inner{
+    height:1130px;
+    overflow:hidden;
+  }
+
 }
 
 /* ===== Search Box ===== */
@@ -1045,13 +1054,13 @@ main{flex:1;}
 }
 
 .projectCard:hover{
-  transform:translateY(-5px);
-  box-shadow:0 22px 55px rgba(0,0,0,.16);
+  transform: translateY(-8px);
+  box-shadow: 0 26px 65px rgba(0,0,0,.18);
 }
 
 .projectCard{
   opacity: 0;
-  transform: translateY(18px);
+  transition: transform .3s ease, box-shadow .3s ease, opacity .3s ease;
 }
 
 .projectCard.page-animate{
@@ -1061,12 +1070,15 @@ main{flex:1;}
 @keyframes pageCardFade{
   from{
     opacity: 0;
-    transform: translateY(18px);
   }
   to{
     opacity: 1;
-    transform: translateY(0);
   }
+}
+
+.projectCard:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 26px 65px rgba(0,0,0,.18);
 }
 
 /* IMAGE */
@@ -1107,7 +1119,7 @@ main{flex:1;}
 
 .projectInfo p{
   margin:2px 0;
-  font-size:14px; 
+  font-size:14px;
 }
 
 /* LINK */
