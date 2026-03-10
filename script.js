@@ -221,7 +221,7 @@ function showPage(page) {
 }
 
 const pagination = document.getElementById("pagination");
-let cardsPerPage = window.innerWidth <= 768 ? 5 : 3;
+let cardsPerPage = window.innerWidth <= 768 ? 5 : 4;
 let currentPage = 1;
 
 function renderPagination(totalPages){
