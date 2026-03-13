@@ -2057,3 +2057,10 @@ body{
   scroll-margin-top: 75px;
 }
 
+.endMessage{
+  text-align:center;
+  margin-top:0px;
+  font-size:9px;
+  color:#777;
+  font-style:italic; display:none;
+}

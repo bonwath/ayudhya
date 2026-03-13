@@ -218,6 +218,23 @@ function showPage(page) {
 });
 
   renderPagination(totalPages);
+
+const endMessage = document.getElementById("endMessage");
+
+if(endMessage){
+
+  const searchActive = searchInput && searchInput.value.trim() !== "";
+  const ministryActive = ministryFilter && ministryFilter.value !== "";
+  const yearActive = yearFilter && yearFilter.value !== "";
+
+  if(page === totalPages && !searchActive && !ministryActive && !yearActive){
+    endMessage.style.display = "block";
+  } else {
+    endMessage.style.display = "none";
+  }
+
+}
+
 }
 
 const pagination = document.getElementById("pagination");
@@ -254,6 +271,8 @@ function renderPagination(totalPages){
   next.className = "page-nav";
   next.onclick = () => showPage(currentPage + 1);
   pagination.appendChild(next);
+
+  
 }
 if (searchInput) {
   searchInput.addEventListener("keyup", filterProjects);
